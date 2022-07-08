@@ -13,7 +13,7 @@
                 <div class="avatar">
                 </div>
                 <div class="name">
-                  <h3 class="title">Section Design</h3>
+                  <h3 class="title">Design</h3>
                 </div>
               </div>
             </div>
@@ -81,7 +81,7 @@
               </template>
             </tabs>
 
-            <p style="fontWeight: bold; marginBottom: 30px"> Si la majorité de ces dessins tournent autour du même sujet, c'est normal ! 
+            <p style="fontWeight: bold"> Si la majorité de ces dessins tournent autour du même sujet, c'est normal ! 
               Un de mes objectifs est de pouvoir être capable de créer des publicités animées pour mon jeu.
               Comme celà ne fait pas longtemps que je m'exerce dans ce domaine, j'essaie de m'améliorer sur un seul sujet.
             </p>

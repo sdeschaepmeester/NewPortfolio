@@ -5,7 +5,7 @@
       :style="headerStyle"
     ></parallax>
     <div class="main main-raised">
-      <div class="section">
+      <div class="section profile-content">
         <div class="container">
           <div class="md-layout">
             <div class="md-layout-item md-size-50 mx-auto">
@@ -13,7 +13,7 @@
                 <div class="avatar">
                 </div>
                 <div class="name">
-                  <h3 class="title">Section Design</h3>
+                  <h3 class="title">Design</h3>
                 </div>
               </div>
             </div>
@@ -23,68 +23,86 @@
               Férue de dessin et de peinture, j'ai pris l'initiative d'apprendre par moi-même le dessin sur tablette, pour par la suite apprendre à faire des animations 2D.
             </p>
           </div>
-
-          <!-- <div class="md-layout-item md-size-50">
-              <div style="height: 250px; width: 350px; backgroundColor: grey">
-                <img :src="getRandomImg()" class="rounded" contain />
-              </div>
-            </div> -->
-
           <div class="profile-tabs">
- 
+            <div style="width: 75%; margin: auto">
+            <carousel
+              :per-page="1"
+              loop
+              :speed="750"
+              autoplay
+              :autoplay-timeout="4500"
+              :mouse-drag="false"
+              navigationEnabled
+              navigationNextLabel="<i class='material-icons'>keyboard_arrow_right</i>"
+              navigationPrevLabel="<i class='material-icons'>keyboard_arrow_left</i>"
+            >
+              <slide><img :src="tabDrawings[0].image" class="rounded" /></slide>
+              <slide><img :src="tabDrawings[1].image" class="rounded" /></slide>
+              <slide><img :src="tabDrawings[2].image" class="rounded" /></slide>
+              <slide><img :src="tabDrawings[3].image" class="rounded" /></slide>
+              <slide><img :src="tabDrawings[4].image" class="rounded" /></slide>
+              <slide><img :src="tabDrawings[5].image" class="rounded" /></slide>
+              <slide><img :src="tabDrawings[6].image" class="rounded" /></slide>
+              <slide><img :src="tabDrawings[7].image" class="rounded" /></slide>
+            </carousel>
+            </div>
+
+            <h5>Beaucoup de ces dessins représente un renard ou espèce proche; étant actuellement entrain de développer un jeu où le personnage principal
+             est un renard, j'essaie de perfectionner mon style en dessinant les personnages de cet univers pour pouvoir un jour réaliser la promotion de mon jeu moi-même.
+            </h5>
+
             <tabs
-              :tab-name="['Dessins', 'Animations']"
-              :tab-icon="['palette', 'movie']"
+              :tab-name="['Dessins', 'Animations', 'En cours']"
+              :tab-icon="['palette', 'movie', 'draw']"
               plain
               nav-pills-icons
               color-button="success"
             >
               <!-- here you can add your content for tab-content -->
               <template slot="tab-pane-1">
-                <div class="md-layout" style="width: 90%; margin: auto; 
-                  background: linear-gradient(186deg, rgba(238,241,209,0.6139589624912465) 0%, rgba(237,212,201,0.7568161053483894) 100%);   ">
-                  <div class="md-layout-item ml-auto" style="margin: 15px">
+                <div class="md-layout">
+                  <div class="md-layout-item  ml-auto">
                     <img :src="tabDrawings[0].image" class="rounded" />
-                    <img :src="tabDrawings[1].image" class="rounded" />
+                    <img :src="getRandomImg()" class="rounded" />
                     <img :src="tabDrawings[2].image" class="rounded" />
                     <img :src="tabDrawings[3].image" class="rounded" />
                   </div>
-                  <div class="md-layout-item ml-auto" style="margin: 15px">
+                  <div class="md-layout-item md-size-50 ml-auto">
                     <img :src="tabDrawings[4].image" class="rounded" />
                     <img :src="tabDrawings[5].image" class="rounded" />
-                    <img :src="tabDrawings[6].image" class="rounded" />
+                                        <img :src="tabDrawings[6].image" class="rounded" />
                     <img :src="tabDrawings[7].image" class="rounded" />
-                  </div>
-                  <div class="md-layout-item ml-auto" style="margin: 15px">
-                    <img :src="tabDrawings[8].image" class="rounded" />
-                    <img :src="tabDrawings[9].image" class="rounded" />
-                    <img :src="tabDrawings[11].image" class="rounded" />
-                    <img :src="tabDrawings[12].image" class="rounded" />
+
                   </div>
                 </div>
               </template>
               <template slot="tab-pane-2">
-                <div class="md-layout" style="width: 90%; margin: auto; 
-                  background: linear-gradient(186deg, rgba(238,241,209,0.6139589624912465) 0%, rgba(237,212,201,0.7568161053483894) 100%);   ">
-                  <div class="md-layout-item ml-auto" style="margin: 15px">
-                    <img :src="tabAnimations[3].image" class="rounded" />
-                    <img :src="tabAnimations[4].image" class="rounded" />
+                <div class="md-layout">
+                  <div class="md-layout-item md-size-25 ml-auto">
+                    <img :src="tabPane2[0].image" class="rounded" />
+                    <img :src="tabPane2[1].image" class="rounded" />
+                    <img :src="tabPane2[2].image" class="rounded" />
                   </div>
-                  <div class="md-layout-item ml-auto" style="margin: 15px">
-                    <img :src="tabAnimations[0].image" class="rounded" />
-                    <img :src="tabAnimations[1].image" class="rounded" />
+                  <div class="md-layout-item md-size-25 mr-auto">
+                    <img :src="tabPane2[3].image" class="rounded" />
+                    <img :src="tabPane2[4].image" class="rounded" />
                   </div>
-                  <div class="md-layout-item ml-auto" style="margin: 15px">
-                    <img :src="tabAnimations[2].image" class="rounded" />
+                </div>
+              </template>
+              <template slot="tab-pane-3">
+                <div class="md-layout">
+                  <div class="md-layout-item md-size-25 ml-auto">
+                    <img :src="tabPane3[0].image" class="rounded" />
+                    <img :src="tabPane3[1].image" class="rounded" />
+                  </div>
+                  <div class="md-layout-item md-size-25 mr-auto">
+                    <img :src="tabPane3[2].image" class="rounded" />
+                    <img :src="tabPane3[3].image" class="rounded" />
+                    <img :src="tabPane3[4].image" class="rounded" />
                   </div>
                 </div>
               </template>
             </tabs>
-
-            <p style="fontWeight: bold; marginBottom: 30px"> Si la majorité de ces dessins tournent autour du même sujet, c'est normal ! 
-              Un de mes objectifs est de pouvoir être capable de créer des publicités animées pour mon jeu.
-              Comme celà ne fait pas longtemps que je m'exerce dans ce domaine, j'essaie de m'améliorer sur un seul sujet.
-            </p>
           </div>
         </div>
       </div>
@@ -116,13 +134,20 @@ export default {
         { image: require("@/assets/img/drawing/logo.png") },
         { image: require("@/assets/img/drawing/coyote.png") },
       ],
-      tabAnimations: [
+      tabPane2: [
         { image: require("@/assets/img/animation/dog_computer.gif") },
         { image: require("@/assets/img/animation/fox_painting.gif") },
         { image: require("@/assets/img/animation/fox_first_anim.gif") },
         { image: require("@/assets/img/animation/fox_shelf.gif") },
         { image: require("@/assets/img/animation/fox_munching.gif") },
       ],
+      tabPane3: [
+        { image: require("@/assets/img/examples/mariya-georgieva.jpg") },
+        { image: require("@/assets/img/examples/studio-3.jpg") },
+        { image: require("@/assets/img/examples/clem-onojeghuo.jpg") },
+        { image: require("@/assets/img/examples/olu-eletu.jpg") },
+        { image: require("@/assets/img/examples/studio-1.jpg") }
+      ]
     };
   },
   props: {
@@ -145,7 +170,8 @@ export default {
   methods: {
     getRandomImg: function () {
       let random = Math.floor(Math.random() * this.tabDrawings.length);
-      return this.tabDrawings[random].image
+      alert('Hello '+this.tabDrawings[random])
+      return require("@/assets/img/faces/christian.jpg")
     }
   }
 };

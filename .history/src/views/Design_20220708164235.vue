@@ -13,7 +13,7 @@
                 <div class="avatar">
                 </div>
                 <div class="name">
-                  <h3 class="title">Section Design</h3>
+                  <h3 class="title">Design</h3>
                 </div>
               </div>
             </div>

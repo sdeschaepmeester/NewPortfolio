@@ -4,7 +4,7 @@
       class="section page-header header-filter"
       :style="headerStyle"
     ></parallax>
-    <div class="main main-raised">
+    <div class="main">
       <div class="section">
         <div class="container">
           <div class="md-layout">
@@ -13,7 +13,7 @@
                 <div class="avatar">
                 </div>
                 <div class="name">
-                  <h3 class="title">Section Design</h3>
+                  <h3 class="title">Design</h3>
                 </div>
               </div>
             </div>

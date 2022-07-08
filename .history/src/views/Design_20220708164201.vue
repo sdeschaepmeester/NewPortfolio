@@ -6,18 +6,7 @@
     ></parallax>
     <div class="main main-raised">
       <div class="section">
-        <div class="container">
-          <div class="md-layout">
-            <div class="md-layout-item md-size-50 mx-auto">
-              <div class="profile">
-                <div class="avatar">
-                </div>
-                <div class="name">
-                  <h3 class="title">Section Design</h3>
-                </div>
-              </div>
-            </div>
-          </div>
+
           <div class="description text-center">
             <p>
               Férue de dessin et de peinture, j'ai pris l'initiative d'apprendre par moi-même le dessin sur tablette, pour par la suite apprendre à faire des animations 2D.
