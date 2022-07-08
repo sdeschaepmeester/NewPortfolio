@@ -1,0 +1,125 @@
+<template>
+  <div class="wrapper">
+    <parallax
+      class="section page-header header-filter"
+      :style="headerStyle"
+    ></parallax>
+    <div class="main main-raised">
+      <div class="section profile-content">
+        <div class="container">
+          <div class="md-layout">
+            <div class="md-layout-item md-size-50 mx-auto">
+              <div class="profile">
+                <div class="avatar">
+                  <img
+                    :src="img"
+                    alt="Circle Image"
+                    class="img-raised rounded-circle img-fluid"
+                  />
+                </div>
+                <div class="name">
+                  <h3 class="title">Samantha deschaepmeester</h3>
+                  <h6>Développeuse web et mobile</h6>
+                  <md-button
+                    href="https://www.linkedin.com/in/samantha-deschaepmeester/"
+                    class="md-just-icon md-simple md-dribbble"
+                    ><i class="fab fa-linkedin"></i></md-button>
+                  <md-button
+                    href="https://github.com/sdeschaepmeester"
+                    class="md-just-icon md-simple md-twitter"
+                    ><i class="fab fa-github"></i></md-button>
+                  <md-button
+                    href="https://www.youtube.com/channel/UC_iJU8cmp9euihl1_mgpZ0g"
+                    class="md-just-icon md-simple md-pinterest"
+                    ><i class="fab fa-youtube"></i
+                  ></md-button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="description text-center">
+            <p>
+              Passionnée par le développement et l'informatique, j'aime apprendre de nouvelles technologies web ou mobile.
+              Si j'ai choisi le domaine du développement informatique, c'est que les possibilités de création sont presque infinis.
+            </p>
+          </div>
+          <div>
+            <h2> Mon CV</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import { Tabs } from "@/components";
+export default {
+  components: {
+    Tabs
+  },
+  bodyClass: "profile-page",
+  data() {
+    return {
+      tabPane1: [
+        { image: require("@/assets/img/examples/studio-1.jpg") },
+        { image: require("@/assets/img/examples/studio-2.jpg") },
+        { image: require("@/assets/img/examples/studio-4.jpg") },
+        { image: require("@/assets/img/examples/studio-5.jpg") }
+      ],
+      tabPane2: [
+        { image: require("@/assets/img/examples/olu-eletu.jpg") },
+        { image: require("@/assets/img/examples/clem-onojeghuo.jpg") },
+        { image: require("@/assets/img/examples/cynthia-del-rio.jpg") },
+        { image: require("@/assets/img/examples/mariya-georgieva.jpg") },
+        { image: require("@/assets/img/examples/clem-onojegaw.jpg") }
+      ],
+      tabPane3: [
+        { image: require("@/assets/img/examples/mariya-georgieva.jpg") },
+        { image: require("@/assets/img/examples/studio-3.jpg") },
+        { image: require("@/assets/img/examples/clem-onojeghuo.jpg") },
+        { image: require("@/assets/img/examples/olu-eletu.jpg") },
+        { image: require("@/assets/img/examples/studio-1.jpg") }
+      ]
+    };
+  },
+  props: {
+    header: {
+      type: String,
+      default: require("@/assets/img/linkedin-banner.png")
+    },
+    img: {
+      type: String,
+      default: require("@/assets/img/faces/me.png")
+    }
+  },
+  computed: {
+    headerStyle() {
+      return {
+        backgroundImage: `url(${this.header})`
+      };
+    }
+  }
+};
+</script>
+
+<style lang="scss" scoped>
+.section {
+  padding: 0;
+}
+
+.profile-tabs::v-deep {
+  .md-card-tabs .md-list {
+    justify-content: center;
+  }
+
+  [class*="tab-pane-"] {
+    margin-top: 3.213rem;
+    padding-bottom: 50px;
+
+    img {
+      margin-bottom: 2.142rem;
+    }
+  }
+}
+</style>

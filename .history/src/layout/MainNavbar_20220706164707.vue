@@ -8,8 +8,9 @@
   >
     <div class="md-toolbar-row md-collapse-lateral">
       <div class="md-toolbar-section-start">
-        <a href="#/">
-          <img src="../assets/img/logo-simple.png" style="height: 70px; left: 0; position: 'absolute'" />
+        <a href="#/profile">
+          <img src="../assets/img/logo-simple.png" style="height: 90px; left: 0" />
+          <h3 class="md-title">Portfolio S.Deschaepmeester</h3>
         </a>
       </div>
       <div class="md-toolbar-section-end">
@@ -33,7 +34,7 @@
                 target="_blank"
               >
                 <i class="material-icons">person</i>
-                <a href="#/cv">Mon CV</a>
+                <a href="#/profile">Mon CV</a>
               </md-list-item>
 
               <md-list-item

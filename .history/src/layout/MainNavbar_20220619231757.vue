@@ -80,7 +80,7 @@
               </li>
 
               <md-list-item
-                href="https://demos.creative-tim.com/vue-material-kit/documentation/"
+                href="#/profile"
                 target="_blank"
                 v-if="showDownload"
               >

@@ -8,7 +8,7 @@
   >
     <div class="md-toolbar-row md-collapse-lateral">
       <div class="md-toolbar-section-start">
-        <h3 class="md-title">Portfolio</h3>
+        <h3 class="md-title">Portfolio S.Deschaepmeester</h3>
       </div>
       <div class="md-toolbar-section-end">
         <md-button
@@ -54,7 +54,23 @@
                             href="https://demos.creative-tim.com/vue-material-kit/documentation/"
                           >
                             <i class="material-icons">content_paste</i>
-                            <p>Documentation</p>
+                            <p>Mon CV</p>
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="https://demos.creative-tim.com/vue-material-kit/documentation/"
+                          >
+                            <i class="material-icons">content_paste</i>
+                            <p>Projets personnels</p>
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="https://demos.creative-tim.com/vue-material-kit/documentation/"
+                          >
+                            <i class="material-icons">ac_unit</i>
+                            <p>Design</p>
                           </a>
                         </li>
                       </ul>
@@ -64,21 +80,30 @@
               </li>
 
               <md-list-item
+                href="#/profile"
+                target="_blank"
+                v-if="showDownload"
+              >
+                <i class="material-icons">person</i>
+                <p>Mon CV</p>
+              </md-list-item>
+
+              <md-list-item
                 href="https://demos.creative-tim.com/vue-material-kit/documentation/"
                 target="_blank"
                 v-if="showDownload"
               >
-                <i class="material-icons">content_paste</i>
-                <p>Documentation</p>
+                <i class="material-icons">folder_shared</i>
+                <p>Projets personnels</p>
               </md-list-item>
 
-              <md-list-item
-                href="javascript:void(0)"
-                @click="scrollToElement()"
+            <md-list-item
+                href="https://demos.creative-tim.com/vue-material-kit/documentation/"
+                target="_blank"
                 v-if="showDownload"
               >
-                <i class="material-icons">cloud_download</i>
-                <p>Download</p>
+                <i class="material-icons">brush</i>
+                <p>Design</p>
               </md-list-item>
 
               <li class="md-list-item" v-else>
@@ -122,33 +147,13 @@
               </li>
 
               <md-list-item
-                href="https://twitter.com/CreativeTim"
+                href="https://www.linkedin.com/in/samantha-deschaepmeester/"
                 target="_blank"
               >
-                <i class="fab fa-twitter"></i>
+                <i class="fab fa-linkedin"></i>
                 <p class="hidden-lg">Twitter</p>
                 <md-tooltip md-direction="bottom"
-                  >Follow us on Twitter</md-tooltip
-                >
-              </md-list-item>
-              <md-list-item
-                href="https://www.facebook.com/CreativeTim"
-                target="_blank"
-              >
-                <i class="fab fa-facebook-square"></i>
-                <p class="hidden-lg">Facebook</p>
-                <md-tooltip md-direction="bottom"
-                  >Like us on Facebook</md-tooltip
-                >
-              </md-list-item>
-              <md-list-item
-                href="https://www.instagram.com/CreativeTimOfficial"
-                target="_blank"
-              >
-                <i class="fab fa-instagram"></i>
-                <p class="hidden-lg">Instagram</p>
-                <md-tooltip md-direction="bottom"
-                  >Follow us on Instagram</md-tooltip
+                  >Retrouvez-moi sur LinkedIn</md-tooltip
                 >
               </md-list-item>
             </md-list>

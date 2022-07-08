@@ -8,9 +8,7 @@
   >
     <div class="md-toolbar-row md-collapse-lateral">
       <div class="md-toolbar-section-start">
-        <a href="#/">
-          <img src="../assets/img/logo-simple.png" style="height: 70px; left: 0; position: 'absolute'" />
-        </a>
+        <h3 class="md-title">Portfolio S.Deschaepmeester</h3>
       </div>
       <div class="md-toolbar-section-end">
         <md-button
@@ -33,23 +31,25 @@
                 target="_blank"
               >
                 <i class="material-icons">person</i>
-                <a href="#/cv">Mon CV</a>
+                <a href="#/profile">Mon CV</a>
               </md-list-item>
 
               <md-list-item
+                href="https://demos.creative-tim.com/vue-material-kit/documentation/"
                 target="_blank"
                 v-if="showDownload"
               >
                 <i class="material-icons">folder_shared</i>
-                <a href="#/profile">Projets personnels</a>
+                <p>Projets personnels</p>
               </md-list-item>
 
             <md-list-item
+                href="https://demos.creative-tim.com/vue-material-kit/documentation/"
                 target="_blank"
                 v-if="showDownload"
               >
                 <i class="material-icons">brush</i>
-                <a href="#/profile">Design</a>
+                <p>Design</p>
               </md-list-item>
               <md-list-item
                 href="https://www.linkedin.com/in/samantha-deschaepmeester/"

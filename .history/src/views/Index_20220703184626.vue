@@ -16,7 +16,7 @@
       <div class="section section-basic">
         <div class="container">
           <div class="title">
-            <h2>Une développeuse passionnée de design</h2>
+            <h2>A propos...</h2>
           </div>
           <a-propos/>
         </div>

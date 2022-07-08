@@ -9,8 +9,7 @@
     D'autre part, je me suis mise à apprendre le dessin sur tablette et l'animation 2D, ce qui me permet de créer mes propres designs afin de faire la promotion
      de mon jeu mentionné plus haut.
     <br/><br/>
-    Vous pouvez voir l'évolution de mon travail dans la section <span style="font-weight:bold">"Design"</span> ainsi que dans la section <span style="font-weight:bold">"Projets Personnels"</span> pour 
-    une description plus poussée de mes projets de développement.
+    Vous pouvez voir mon travail dans la section <span style="font-weight:bold">"Design"</span>.
     <img src="../../assets/img/fox-silhouette.png" style="height: 250px; display:block; float:right" />
   </div>
 </template>

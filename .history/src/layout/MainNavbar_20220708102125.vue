@@ -33,7 +33,7 @@
                 target="_blank"
               >
                 <i class="material-icons">person</i>
-                <a href="#/cv">Mon CV</a>
+                <a href="#/cV">Mon CV</a>
               </md-list-item>
 
               <md-list-item

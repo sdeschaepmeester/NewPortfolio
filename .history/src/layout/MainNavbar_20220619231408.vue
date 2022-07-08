@@ -50,9 +50,7 @@
                           </a>
                         </li>
                         <li>
-                          <a
-                            href="https://demos.creative-tim.com/vue-material-kit/documentation/"
-                          >
+                        <a href="#/profile">
                             <i class="material-icons">content_paste</i>
                             <p>Mon CV</p>
                           </a>
