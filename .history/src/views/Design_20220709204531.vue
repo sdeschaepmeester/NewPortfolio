@@ -85,17 +85,29 @@
               </template>
             </tabs>
 
+
+
               <modal v-if="modalShowImage" @close="modalShowImageHide" class="modalImage">
                 <template slot="header">
                   <h4 class="modal-title">{{modalImage.name}}</h4>
-                  <md-button class="md-simple md-just-icon md-round modal-default-button" @click="modalShowImageHide" > <md-icon>clear</md-icon> </md-button>
+                  <md-button
+                    class="md-simple md-just-icon md-round modal-default-button"
+                    @click="modalShowImageHide"
+                  >
+                    <md-icon>clear</md-icon>
+                  </md-button>
                 </template>
                 <template slot="body">
-                  <img :src="modalImage.image" class="imageInModal"/>
+                  <img :src="modalImage.image" />
                   <p>{{modalImage.description}}</p>
                 </template>
+                <template slot="footer">
+                  <md-button
+                    class="md-danger md-simple"
+                    @click="modalShowImageHide"
+                    >Close</md-button>
+                </template>
               </modal>
-
             <p style="marginBottom: 20px"> 
               Un de mes objectifs étant de faire la promotion de mon jeu mobile sous forme de vidéo animée par des animation 2D, 
               beaucoup de ces dessins ont pour sujet un ou plusieurs personnages de mon jeu.
@@ -138,7 +150,7 @@ export default {
       tabAnimations: [
         { image: require("@/assets/img/animation/dog_computer.gif"), name: "Coding dog", description: "Un personnage de mon jeu." },
         { image: require("@/assets/img/animation/fox_painting.gif"), name: "Painting fox", description: "Le renard, héro de mon jeu." },
-        { image: require("@/assets/img/animation/fox_first_anim.gif"), name: "My pet fox", description: "Psst ! Ce n'est pas le vrai nom du jeu." },
+        { image: require("@/assets/img/animation/fox_first_anim.gif"), name: "My pet fox", description: "Psst ! Ce n'est pas le vrai nom de mon jeu." },
         { image: require("@/assets/img/animation/fox_shelf.gif"), name: "My pet fox", description: "Une animation faite pour illustrer mon premier article LinkedIn."},
         { image: require("@/assets/img/animation/fox_munching.gif"), name: "Fox munching bone", description: "Tentative de dessiner un renard sous un style différent, plus 'sketch'." },
       ],
@@ -180,15 +192,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.imageInModal{
-  max-height: 250px;
-  max-width: 500px;
-}
-
 .modalImage {
   height: 500px!important;
   position: fixed!important;
-  margin-top: 5%!important;
+  bottom: 100px!important;
+  z-index: 99999!important;
 }
 
 .section {
