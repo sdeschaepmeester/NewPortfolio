@@ -66,15 +66,6 @@ export default new Router({
         header: { colorOnScroll: 400 },
         footer: { backgroundColor: "black" }
       }
-    },
-    {
-      path: "/projects",
-      name: "Projects",
-      components: { default: Projects, header: MainNavbar, footer: MainFooter },
-      props: {
-        header: { colorOnScroll: 400 },
-        footer: { backgroundColor: "black" }
-      }
     }
   ],
   scrollBehavior: to => {

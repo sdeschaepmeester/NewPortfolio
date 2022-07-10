@@ -46,28 +46,25 @@
                   box-shadow: 1px 1px 10px 1px #154d1a;
                   ">
                   <div class="md-layout-item ml-auto" style="margin: 15px">
-                    <img @click="showModal(tabDrawings[0])" :src="tabDrawings[0].image" class="rounded imageSmall" />
-                    <img @click="showModal(tabDrawings[1])" :src="tabDrawings[1].image" class="rounded imageSmall" />
-                    <img @click="showModal(tabDrawings[2])" :src="tabDrawings[2].image" class="rounded imageSmall" />
-                    <img @click="showModal(tabDrawings[3])" :src="tabDrawings[3].image" class="rounded imageSmall" />
-                    <img @click="showModal(tabDrawings[13])" :src="tabDrawings[13].image" class="rounded imageSmall" />
-                    <img @click="showModal(tabDrawings[17])" :src="tabDrawings[17].image" class="rounded imageSmall" />
-
+                    <img @click="showModal(tabDrawings[0])" :src="tabDrawings[0].image" class="rounded" />
+                    <img @click="showModal(tabDrawings[1])" :src="tabDrawings[1].image" class="rounded" />
+                    <img @click="showModal(tabDrawings[2])" :src="tabDrawings[2].image" class="rounded" />
+                    <img @click="showModal(tabDrawings[3])" :src="tabDrawings[3].image" class="rounded" />
+                    <img @click="showModal(tabDrawings[13])" :src="tabDrawings[13].image" class="rounded" />
                   </div>
                   <div class="md-layout-item ml-auto" style="margin: 15px">
-                    <img @click="showModal(tabDrawings[4])" :src="tabDrawings[4].image" class="rounded imageSmall" />
-                    <img @click="showModal(tabDrawings[5])" :src="tabDrawings[5].image" class="rounded imageSmall" />
-                    <img @click="showModal(tabDrawings[6])" :src="tabDrawings[6].image" class="rounded imageSmall" />
-                    <img @click="showModal(tabDrawings[7])" :src="tabDrawings[7].image" class="rounded imageSmall" />
-                    <img @click="showModal(tabDrawings[16])" :src="tabDrawings[16].image" class="rounded imageSmall" />
-                    <img @click="showModal(tabDrawings[18])" :src="tabDrawings[18].image" class="rounded imageSmall" />
+                    <img @click="showModal(tabDrawings[4])" :src="tabDrawings[4].image" class="rounded" />
+                    <img @click="showModal(tabDrawings[5])" :src="tabDrawings[5].image" class="rounded" />
+                    <img @click="showModal(tabDrawings[6])" :src="tabDrawings[6].image" class="rounded" />
+                    <img @click="showModal(tabDrawings[7])" :src="tabDrawings[7].image" class="rounded" />
+                    <img @click="showModal(tabDrawings[14])" :src="tabDrawings[14].image" class="rounded" />
                   </div> 
                   <div class="md-layout-item ml-auto" style="margin: 15px">
-                    <img @click="showModal(tabDrawings[8])" :src="tabDrawings[8].image" class="rounded imageSmall" />
-                    <img @click="showModal(tabDrawings[9])" :src="tabDrawings[9].image" class="rounded imageSmall" />
-                    <img @click="showModal(tabDrawings[11])" :src="tabDrawings[11].image" class="rounded imageSmall" />
-                    <img @click="showModal(tabDrawings[12])" :src="tabDrawings[12].image" class="rounded imageSmall" />
-                    <img @click="showModal(tabDrawings[15])" :src="tabDrawings[15].image" class="rounded imageSmall" />
+                    <img @click="showModal(tabDrawings[8])" :src="tabDrawings[8].image" class="rounded" />
+                    <img @click="showModal(tabDrawings[9])" :src="tabDrawings[9].image" class="rounded" />
+                    <img @click="showModal(tabDrawings[11])" :src="tabDrawings[11].image" class="rounded" />
+                    <img @click="showModal(tabDrawings[12])" :src="tabDrawings[12].image" class="rounded" />
+                    <img @click="showModal(tabDrawings[15])" :src="tabDrawings[15].image" class="rounded" />
                   </div>
                 </div>
               </template>
@@ -77,15 +74,15 @@
                   box-shadow: 1px 1px 10px 1px #154d1a;
                   ">
                   <div class="md-layout-item ml-auto" style="margin: 15px">
-                    <img @click="showModal(tabAnimations[3])" :src="tabAnimations[3].image" class="rounded imageSmall" />
-                    <img @click="showModal(tabAnimations[4])" :src="tabAnimations[4].image" class="rounded imageSmall" />
+                    <img @click="showModal(tabAnimations[3])" :src="tabAnimations[3].image" class="rounded" />
+                    <img @click="showModal(tabAnimations[4])" :src="tabAnimations[4].image" class="rounded" />
                   </div>
                   <div class="md-layout-item ml-auto" style="margin: 15px">
-                    <img @click="showModal(tabAnimations[0])" :src="tabAnimations[0].image" class="rounded imageSmall" />
-                    <img @click="showModal(tabAnimations[1])" :src="tabAnimations[1].image" class="rounded imageSmall" />
+                    <img @click="showModal(tabAnimations[0])" :src="tabAnimations[0].image" class="rounded" />
+                    <img @click="showModal(tabAnimations[1])" :src="tabAnimations[1].image" class="rounded" />
                   </div>
                   <div class="md-layout-item ml-auto" style="margin: 15px">
-                    <img @click="showModal(tabAnimations[2])" :src="tabAnimations[2].image" class="rounded imageSmall" />
+                    <img @click="showModal(tabAnimations[2])" :src="tabAnimations[2].image" class="rounded" />
                   </div>
                 </div>
               </template>
@@ -194,8 +191,8 @@ export default {
 
 <style lang="scss" scoped>
 
-.imageSmall:hover{
-  cursor: zoom-in!important;
+.headerImg{
+  resize: contain!important;
 }
 
 .imageInModal{

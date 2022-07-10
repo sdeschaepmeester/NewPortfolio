@@ -9,7 +9,7 @@
     <div class="md-toolbar-row md-collapse-lateral">
       <div class="md-toolbar-section-start">
         <a href="#/">
-          <img src="../assets/img/logo-simple.png" style="height: 70px; left: 0; position: 'absolute'" />
+          <img src="../assets/img/logo-neon.png" style="height: 70px; left: 0; position: 'absolute'" />
         </a>
       </div>
       <div class="md-toolbar-section-end">
