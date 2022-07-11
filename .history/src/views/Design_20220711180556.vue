@@ -76,15 +76,15 @@
                   box-shadow: 1px 1px 10px 1px #154d1a;
                   ">
                   <div class="md-layout-item ml-auto" style="margin: 15px">
-                    <img @click="showModal(getObjById('fox-shelf','animation'))" :src="getImgById('fox-shelf','animation')" class="rounded imageSmall" />
-                    <img @click="showModal(getObjById('fox-munching','animation'))" :src="getImgById('fox-munching','animation')" class="rounded imageSmall" />
+                    <img @click="showModal(tabAnimations[3])" :src="tabAnimations[3].image" class="rounded imageSmall" />
+                    <img @click="showModal(tabAnimations[4])" :src="tabAnimations[4].image" class="rounded imageSmall" />
                   </div>
                   <div class="md-layout-item ml-auto" style="margin: 15px">
-                    <img @click="showModal(getObjById('dog-computer','animation'))" :src="getImgById('dog-computer','animation')" class="rounded imageSmall" />
-                    <img @click="showModal(getObjById('fox-painting','animation'))" :src="getImgById('fox-painting','animation')" class="rounded imageSmall" />
+                    <img @click="showModal(tabAnimations[0])" :src="tabAnimations[0].image" class="rounded imageSmall" />
+                    <img @click="showModal(tabAnimations[1])" :src="tabAnimations[1].image" class="rounded imageSmall" />
                   </div>
                   <div class="md-layout-item ml-auto" style="margin: 15px">
-                    <img @click="showModal(getObjById('pet-fox','animation'))" :src="getImgById('pet-fox','animation')" class="rounded imageSmall" />
+                    <img @click="showModal(tabAnimations[2])" :src="tabAnimations[2].image" class="rounded imageSmall" />
                   </div>
                 </div>
               </template>
@@ -127,17 +127,17 @@ export default {
       modalImage: null,
       tabDrawings: [
         { id: "neon-fox", image: require("@/assets/img/drawing/neon-fox.png"), name: "Neon fox", description: "Un entrainement pour apprendre à dessiner l'effet néon."},
-        { id: "fox-pumpkin", image: require("@/assets/img/drawing/fox-pumpkin.png"), name: "Pumpkin fox", description: "Dessin représentant le renard de mon jeu sur une cifrousse." },
+        { id: "fox-pumpkin", image: require("@/assets/img/drawing/fox-pumpkin.png"), name: "Fox Pumpkin", description: "Dessin représentant le renard de mon jeu sur une citrouille." },
         { id: "andrew", image: require("@/assets/img/drawing/andrew.png"), name: "Andrew", description: "Ma tourterelle, fidèle associé." },
-        { id: "fox-moon", image: require("@/assets/img/drawing/foxmoon.png"), name: "Renard sous la lune", description: "Un entrainement pour apprendre à dessiner l'effet néon." },
-        { id: "me-and-pets", image: require("@/assets/img/drawing/github.png"), name: "Moi et mes animaux", description: "Ma bannière Github" },
-        { id: "black-fox", image: require("@/assets/img/drawing/vista-snow.png"), name: "Renard noir", description: "Un personnage de mon jeu." },
-        { id: "fox-sunset", image: require("@/assets/img/drawing/fox-sunset.png"), name: "Renard avec coucher de soleil", description: "Un entrainement pour apprendre les dégradés." },
-        { id: "fox-bubbles", image: require("@/assets/img/drawing/fox-bubbles.png"), name: "Fox silhouette", description: "Une silhouette que j'utilise dans des bannières, avec des bubulles." },
+        { id: "fox-moon", image: require("@/assets/img/drawing/foxmoon.png"), name: "Fox under the moon", description: "Un entrainement pour apprendre à dessiner l'effet néon." },
+        { id: "me-and-pets", image: require("@/assets/img/drawing/github.png"), name: "Me and my pets", description: "Ma bannière Github" },
+        { id: "black-fox", image: require("@/assets/img/drawing/vista-snow.png"), name: "Black fox", description: "Un personnage de mon jeu." },
+        { id: "fox-sunset", image: require("@/assets/img/drawing/fox-sunset.png"), name: "Fox silhouette", description: "Silhouette de renard." },
+        { id: "fox-bubbles", image: require("@/assets/img/drawing/fox-bubbles.png"), name: "Fox silhouette", description: "Silhouette de renard." },
         { id: "fox-sketch", image: require("@/assets/img/drawing/fox-sketch.png"), name: "Fox sketches", description: "Apprendre à dessiner les renards sous diverses positions." },
-        { id: "knight-full", image: require("@/assets/img/drawing/knight_full.png"), name: "Artorias Knight", description: "Apprendre à dessiner un humain en suivant un modèle (Hero forge)." },
-        { id: "knight", image: require("@/assets/img/drawing/knight.png"), name: "Artorias Knight", description: "Apprendre à dessiner un humain en suivant un modèle (Hero forge)." },
-        { id: "logo", image: require("@/assets/img/drawing/logo.png"), name: "Andrew logo", description: "Un logo que j'utilise représentant mon oiseau." },
+        { id: "knight-full", image: require("@/assets/img/drawing/knight_full.png"), name: "Artorias Knight", description: "Apprendre à dessiner un humain en suivant un modèle." },
+        { id: "knight", image: require("@/assets/img/drawing/knight.png"), name: "Artorias Knight", description: "Apprendre à dessiner un humain en suivant un modèle." },
+        { id: "logo", image: require("@/assets/img/drawing/logo.png"), name: "Andrew logo", description: "Un logo que j'utilise." },
         { id: "coyote", image: require("@/assets/img/drawing/coyote.png"), name: "Coyote", description: "Un personnage de mon jeu." },
         { id: "lake", image: require("@/assets/img/drawing/lake.png"), name: "Pink lake", description: "Voyez la vie en rose !" },
         { id: "lake-green", image: require("@/assets/img/drawing/lakegreen.png"), name: "Green lake", description: "Un paysage de lac aux tons verts." },
@@ -148,7 +148,7 @@ export default {
       ],
       tabAnimations: [
         { id: "dog-computer", image: require("@/assets/img/animation/dog_computer.gif"), name: "Coding dog", description: "Un personnage de mon jeu." },
-        { id: "fox-painting", image: require("@/assets/img/animation/fox_painting.gif"), name: "Painting fox", description: "Le renard héro de mon jeu." },
+        { id: "fox-painting", image: require("@/assets/img/animation/fox_painting.gif"), name: "Painting fox", description: "Le renard, héro de mon jeu." },
         { id: "pet-fox", image: require("@/assets/img/animation/fox_first_anim.gif"), name: "My pet fox", description: "Psst ! Ce n'est pas le vrai nom du jeu." },
         { id: "fox-shelf", image: require("@/assets/img/animation/fox_shelf.gif"), name: "My pet fox", description: "Une animation faite pour illustrer mon premier article LinkedIn."},
         { id: "fox-munching", image: require("@/assets/img/animation/fox_munching.gif"), name: "Fox munching bone", description: "Tentative de dessiner un renard sous un style différent, plus 'sketch'." },

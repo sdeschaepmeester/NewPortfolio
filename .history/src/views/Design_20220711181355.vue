@@ -77,14 +77,14 @@
                   ">
                   <div class="md-layout-item ml-auto" style="margin: 15px">
                     <img @click="showModal(getObjById('fox-shelf','animation'))" :src="getImgById('fox-shelf','animation')" class="rounded imageSmall" />
-                    <img @click="showModal(getObjById('fox-munching','animation'))" :src="getImgById('fox-munching','animation')" class="rounded imageSmall" />
+                    <img @click="showModal(tabAnimations[4])" :src="getImgById('fox-munching','animation')" class="rounded imageSmall" />
                   </div>
                   <div class="md-layout-item ml-auto" style="margin: 15px">
-                    <img @click="showModal(getObjById('dog-computer','animation'))" :src="getImgById('dog-computer','animation')" class="rounded imageSmall" />
-                    <img @click="showModal(getObjById('fox-painting','animation'))" :src="getImgById('fox-painting','animation')" class="rounded imageSmall" />
+                    <img @click="showModal(tabAnimations[0])" :src="getImgById('dog-computer','animation')" class="rounded imageSmall" />
+                    <img @click="showModal(tabAnimations[1])" :src="getImgById('fox-painting','animation')" class="rounded imageSmall" />
                   </div>
                   <div class="md-layout-item ml-auto" style="margin: 15px">
-                    <img @click="showModal(getObjById('pet-fox','animation'))" :src="getImgById('pet-fox','animation')" class="rounded imageSmall" />
+                    <img @click="showModal(tabAnimations[2])" :src="getImgById('pet-fox','animation')" class="rounded imageSmall" />
                   </div>
                 </div>
               </template>
