@@ -51,7 +51,7 @@ export default new Router({
     {
       path: "/mentions",
       name: "Mentions Légales",
-      components: { default: MentionsLegales, header: MainNavbar, footer: MainFooter },
+      components: { default: Projects, header: MainNavbar, footer: MainFooter },
       props: {
         header: { colorOnScroll: 400 },
         footer: { backgroundColor: "black" }
