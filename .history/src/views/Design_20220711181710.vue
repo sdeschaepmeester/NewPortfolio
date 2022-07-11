@@ -103,7 +103,7 @@
 
             <p style="marginBottom: 20px"> 
               Un de mes objectifs étant de faire la promotion de mon jeu mobile sous forme de vidéo animée par des animations 2D, 
-              beaucoup de ces dessins ont pour sujet un ou plusieurs personnages de mon jeu (des renards).
+              beaucoup de ces dessins ont pour sujet un ou plusieurs personnages de mon jeu.
             </p>
           </div>
         </div>

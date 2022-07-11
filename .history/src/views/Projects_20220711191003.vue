@@ -54,7 +54,7 @@
           </div>
 
 
-          <h4 style="marginTop: 10%">Mon portfolio</h4>
+          <h4>Mon portfolio</h4>
           <div class="md-layout">
             <div class="md-layout-item md-size-50 md-xsmall-size-100" >
               <div style="box-shadow: 1px 1px 10px 1px #154d1a;">
@@ -63,23 +63,20 @@
                 />
               </div>
             </div>
-            <div class="md-layout-item md-xsmall-size-100" style="marginBottom: 5%">
+            <div class="md-layout-item md-xsmall-size-100">
               <p><span style="fontWeight: bold">Date de début :</span> Juin 2022</p>
               <p><span style="fontWeight: bold">État :</span> Terminé</p>
               <p><span style="fontWeight: bold">Technologies :</span> VueJS, Template by Tim creative</p>
               <p>Anciennement fait en ReactJS, j'ai décidé de refaire un projet de portfolio en utilisant du VueJS.
-                <br/><br/>
+                <br/>
                 Ce portfolio est composé de plusieurs sections : CV, Design, Projet personnels.
-                <br/><br/>
+                <br/>
                 Toutes les images et animations présentes dans ce portfolio m'appartiennent et ont été réalisés sous FireAlpaca.
               </p>
             </div>
           </div>
-          <br/>
-          <p>
-            D'autres projets verront le jour, mais ne sont pour le moment qu'au stade de l'idée.
-            Je préfère me focaliser sur un projet, et le finir avant d'en commencer un autre.
-          </p>
+
+
         </div>
       </div>
     </div>

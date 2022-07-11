@@ -54,7 +54,7 @@
           </div>
 
 
-          <h4 style="marginTop: 10%">Mon portfolio</h4>
+          <h4>Mon portfolio</h4>
           <div class="md-layout">
             <div class="md-layout-item md-size-50 md-xsmall-size-100" >
               <div style="box-shadow: 1px 1px 10px 1px #154d1a;">
