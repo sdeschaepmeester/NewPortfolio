@@ -214,16 +214,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-modal{
-  height: 800px!important;
-}
 
 .imageSmall:hover{
   cursor: zoom-in!important;
 }
 
 .imageInModal{
-  max-height: 90%;
+  max-height: 250px;
   max-width: 500px;
 }
 

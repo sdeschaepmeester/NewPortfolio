@@ -223,7 +223,7 @@ modal{
 }
 
 .imageInModal{
-  max-height: 90%;
+  max-height: 600px;
   max-width: 500px;
 }
 

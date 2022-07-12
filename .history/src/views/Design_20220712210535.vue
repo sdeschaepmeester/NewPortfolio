@@ -94,7 +94,7 @@
               </template>
             </tabs>
 
-              <modal v-if="modalShowImage" @close="modalShowImageHide" class="modal-lg">
+              <div v-if="modalShowImage" @close="modalShowImageHide" class="modal-lg">
                 <template slot="header">
                   <h4 class="modal-title">{{modalImage.name}}</h4>
                   <md-button class="md-simple md-just-icon md-round modal-default-button" @click="modalShowImageHide" > <md-icon>clear</md-icon> </md-button>
@@ -103,7 +103,7 @@
                   <img :src="modalImage.image" class="imageInModal"/>
                   <p>{{modalImage.description}}</p>
                 </template>
-              </modal>
+              </div>
 
             <p style="marginBottom: 20px"> 
               Un de mes objectifs étant de faire la promotion de mon jeu mobile sous forme de vidéo animée par des animations 2D, 
@@ -214,16 +214,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-modal{
-  height: 800px!important;
-}
 
 .imageSmall:hover{
   cursor: zoom-in!important;
 }
 
 .imageInModal{
-  max-height: 90%;
+  max-height: 250px;
   max-width: 500px;
 }
 

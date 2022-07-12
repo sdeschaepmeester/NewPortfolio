@@ -52,6 +52,7 @@
                     <img @click="showModal(getObjById('meadow','drawing'))" :src="getImgById('meadow','drawing')" class="rounded imageSmall" />
                     <img @click="showModal(getObjById('fox-pumpkin','drawing'))" :src="getImgById('fox-pumpkin','drawing')" class="rounded imageSmall" />
                     <img @click="showModal(getObjById('fire','drawing'))" :src="getImgById('fire','drawing')" class="rounded imageSmall" />
+                    <img @click="showModal(getObjById('fox-sketch','drawing'))" :src="getImgById('fox-sketch','drawing')" class="rounded imageSmall" />
                     <img @click="showModal(getObjById('ghost-fox','drawing'))" :src="getImgById('ghost-fox','drawing')" class="rounded imageSmall" />
                   </div>
                   <div class="md-layout-item ml-auto" style="margin: 15px">
@@ -61,7 +62,6 @@
                     <img @click="showModal(getObjById('fox-sunset','drawing'))" :src="getImgById('fox-sunset','drawing')" class="rounded imageSmall" />
                     <img @click="showModal(getObjById('mill','drawing'))" :src="getImgById('mill','drawing')" class="rounded imageSmall" />
                     <img @click="showModal(getObjById('isle','drawing'))" :src="getImgById('isle','drawing')" class="rounded imageSmall" />
-                    <img @click="showModal(getObjById('fox-sketch','drawing'))" :src="getImgById('fox-sketch','drawing')" class="rounded imageSmall" />
                   </div> 
                   <div class="md-layout-item ml-auto" style="margin: 15px">
                     <img @click="showModal(getObjById('lake-tree','drawing'))" :src="getImgById('lake-tree','drawing')" class="rounded imageSmall" />
@@ -94,7 +94,7 @@
               </template>
             </tabs>
 
-              <modal v-if="modalShowImage" @close="modalShowImageHide" class="modal-lg">
+              <modal v-if="modalShowImage" @close="modalShowImageHide" class="modalImage">
                 <template slot="header">
                   <h4 class="modal-title">{{modalImage.name}}</h4>
                   <md-button class="md-simple md-just-icon md-round modal-default-button" @click="modalShowImageHide" > <md-icon>clear</md-icon> </md-button>
@@ -166,7 +166,7 @@ export default {
   props: {
     header: {
       type: String,
-      default: require("@/assets/img/designbanner.png")
+      default: require("@/assets/img/swan.png")
     }
   },
   computed: {
@@ -214,21 +214,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-modal{
-  height: 800px!important;
-}
 
 .imageSmall:hover{
   cursor: zoom-in!important;
 }
 
 .imageInModal{
-  max-height: 90%;
+  max-height: 250px;
   max-width: 500px;
 }
 
 .modalImage {
-  width: 100%!important;
+  height: 500px!important;
   position: fixed!important;
   margin-top: 5%!important;
 }

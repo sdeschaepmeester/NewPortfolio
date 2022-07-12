@@ -70,7 +70,7 @@
                     <img @click="showModal(getObjById('swan','drawing'))" :src="getImgById('swan','drawing')" class="rounded imageSmall" />
                     <img @click="showModal(getObjById('logo','drawing'))" :src="getImgById('logo','drawing')" class="rounded imageSmall" />
                     <img @click="showModal(getObjById('lake','drawing'))" :src="getImgById('lake','drawing')" class="rounded imageSmall" />
-                    <img @click="showModal(getObjById('bubbles','drawing'))" :src="getImgById('bubbles','drawing')" class="rounded imageSmall" />
+                    <img @click="showModal(getObjById('bubbles','drawing'))" :src="getImgById('bubbles','drawing')" style="height: 80%" />
                   </div>
                 </div>
               </template>
@@ -223,7 +223,7 @@ modal{
 }
 
 .imageInModal{
-  max-height: 90%;
+  max-height: 250px;
   max-width: 500px;
 }
 

@@ -94,7 +94,7 @@
               </template>
             </tabs>
 
-              <modal v-if="modalShowImage" @close="modalShowImageHide" class="modal-lg">
+              <modal v-if="modalShowImage" @close="modalShowImageHide" class="modalImage">
                 <template slot="header">
                   <h4 class="modal-title">{{modalImage.name}}</h4>
                   <md-button class="md-simple md-just-icon md-round modal-default-button" @click="modalShowImageHide" > <md-icon>clear</md-icon> </md-button>
@@ -214,21 +214,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-modal{
-  height: 800px!important;
-}
 
 .imageSmall:hover{
   cursor: zoom-in!important;
 }
 
 .imageInModal{
-  max-height: 90%;
+  max-height: 250px;
   max-width: 500px;
 }
 
 .modalImage {
-  width: 100%!important;
+  width: 110%!important;
   position: fixed!important;
   margin-top: 5%!important;
 }

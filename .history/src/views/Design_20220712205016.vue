@@ -51,17 +51,17 @@
                     <img @click="showModal(getObjById('knight-full','drawing'))" :src="getImgById('knight-full','drawing')" class="rounded imageSmall" />
                     <img @click="showModal(getObjById('meadow','drawing'))" :src="getImgById('meadow','drawing')" class="rounded imageSmall" />
                     <img @click="showModal(getObjById('fox-pumpkin','drawing'))" :src="getImgById('fox-pumpkin','drawing')" class="rounded imageSmall" />
-                    <img @click="showModal(getObjById('fire','drawing'))" :src="getImgById('fire','drawing')" class="rounded imageSmall" />
-                    <img @click="showModal(getObjById('ghost-fox','drawing'))" :src="getImgById('ghost-fox','drawing')" class="rounded imageSmall" />
+                    <img @click="showModal(getObjById('fox-sketch','drawing'))" :src="getImgById('fox-sketch','drawing')" class="rounded imageSmall" />
+                    <img @click="showModal(getObjById('bubbles','drawing'))" :src="getImgById('bubbles','drawing')" class="rounded imageSmall" />
+                    <img @click="showModal(getObjById('isle','drawing'))" :src="getImgById('isle','drawing')" class="rounded imageSmall" />
                   </div>
                   <div class="md-layout-item ml-auto" style="margin: 15px">
                     <img @click="showModal(getObjById('me-and-pets','drawing'))" :src="getImgById('me-and-pets','drawing')" class="rounded imageSmall" />
                     <img @click="showModal(getObjById('black-fox','drawing'))" :src="getImgById('black-fox','drawing')" class="rounded imageSmall" />
                     <img @click="showModal(getObjById('fox-moon','drawing'))" :src="getImgById('fox-moon','drawing')" class="rounded imageSmall" />
+                    <img @click="showModal(getObjById('fire','drawing'))" :src="getImgById('fire','drawing')" class="rounded imageSmall" />
                     <img @click="showModal(getObjById('fox-sunset','drawing'))" :src="getImgById('fox-sunset','drawing')" class="rounded imageSmall" />
                     <img @click="showModal(getObjById('mill','drawing'))" :src="getImgById('mill','drawing')" class="rounded imageSmall" />
-                    <img @click="showModal(getObjById('isle','drawing'))" :src="getImgById('isle','drawing')" class="rounded imageSmall" />
-                    <img @click="showModal(getObjById('fox-sketch','drawing'))" :src="getImgById('fox-sketch','drawing')" class="rounded imageSmall" />
                   </div> 
                   <div class="md-layout-item ml-auto" style="margin: 15px">
                     <img @click="showModal(getObjById('lake-tree','drawing'))" :src="getImgById('lake-tree','drawing')" class="rounded imageSmall" />
@@ -70,7 +70,7 @@
                     <img @click="showModal(getObjById('swan','drawing'))" :src="getImgById('swan','drawing')" class="rounded imageSmall" />
                     <img @click="showModal(getObjById('logo','drawing'))" :src="getImgById('logo','drawing')" class="rounded imageSmall" />
                     <img @click="showModal(getObjById('lake','drawing'))" :src="getImgById('lake','drawing')" class="rounded imageSmall" />
-                    <img @click="showModal(getObjById('bubbles','drawing'))" :src="getImgById('bubbles','drawing')" class="rounded imageSmall" />
+
                   </div>
                 </div>
               </template>
@@ -94,7 +94,7 @@
               </template>
             </tabs>
 
-              <modal v-if="modalShowImage" @close="modalShowImageHide" class="modal-lg">
+              <modal v-if="modalShowImage" @close="modalShowImageHide" class="modalImage">
                 <template slot="header">
                   <h4 class="modal-title">{{modalImage.name}}</h4>
                   <md-button class="md-simple md-just-icon md-round modal-default-button" @click="modalShowImageHide" > <md-icon>clear</md-icon> </md-button>
@@ -148,11 +148,11 @@ export default {
         { id: "lake-tree", image: require("@/assets/img/drawing/lakewithpin.png"), name: "Lake with fir", description: "Un paysage de lac, avec un sapin." },
         { id: "meadow", image: require("@/assets/img/drawing/meadow.png"), name: "Meadow landscape", description: "Un paysage de prairie." },
         { id: "mill", image: require("@/assets/img/drawing/mill.png"), name: "Mill landscape", description: "Un paysage avec un moulin" },
-        { id: "swan", image: require("@/assets/img/drawing/swan.png"), name: "Swan landscape", description: "Un paysage de lac avec un cygne." },
-        { id: "fire", image: require("@/assets/img/drawing/fire.png"), name: "Fire", description: "Premier tentative de dessiner du feu." },
-        { id: "isle", image: require("@/assets/img/drawing/isle.png"), name: "Ile dans le ciel", description: "Sera repris comme modèle d'entrainement pour dessiner des nuages." },
-        { id: "bubbles", image: require("@/assets/img/drawing/bubbles.png"), name: "Bubbles", description: "Des bubulles." },
-        { id: "ghost-fox", image: require("@/assets/img/drawing/ghost-fox.png"), name: "Ghost fox", description: "SpOoky !" },
+        { id: "fire", image: require("@/assets/img/drawing/fire.png"), name: "Fire training", description: "Un entrainement pour apprendre à dessiner une flamme... Bon, ce n'est pas le meilleur." },
+        { id: "bubbles", image: require("@/assets/img/drawing/bubbles.png"), name: "Bubbles", description: "Mon premier essai de dessin de bulles." },
+        { id: "ghost-fox", image: require("@/assets/img/drawing/ghost-fox.png"), name: "Ghost fox", description: "Spooky" },
+        { id: "isle", image: require("@/assets/img/drawing/isle.png"), name: "Ile dans le ciel", description: "Ce dessin sera repris et des nuages seront ajoutés." },
+
       ],
       tabAnimations: [
         { id: "dog-computer", image: require("@/assets/img/animation/dog_computer.gif"), name: "Coding dog", description: "Un personnage de mon jeu." },
@@ -166,7 +166,7 @@ export default {
   props: {
     header: {
       type: String,
-      default: require("@/assets/img/designbanner.png")
+      default: require("@/assets/img/swan.png")
     }
   },
   computed: {
@@ -214,21 +214,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-modal{
-  height: 800px!important;
-}
 
 .imageSmall:hover{
   cursor: zoom-in!important;
 }
 
 .imageInModal{
-  max-height: 90%;
+  max-height: 250px;
   max-width: 500px;
 }
 
 .modalImage {
-  width: 100%!important;
+  height: 500px!important;
   position: fixed!important;
   margin-top: 5%!important;
 }
