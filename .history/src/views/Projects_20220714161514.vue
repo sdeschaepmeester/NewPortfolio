@@ -49,25 +49,34 @@
               </p>
             </div>
           </div>
-          <div class="alert alert-success" style="marginTop: 5%" >
+          <br/>
+            <div>
+              <h5>Regarder les premières vidéos de My pet fox :</h5>
+<FlexboxLayout flexDirection="row" backgroundColor="#3c495e">
+                  <LazyYoutube ref="youtubeVideo" src="https://www.youtube.com/watch?v=gsd_HGN1Tog&list=PLVTOiOamTkwKNusnK4w8eav7kWht3L8ZN&index=4"  maxWidth="1050px" thumbnailQuality="medium" class="youtube" />
+                <img :src="imgYoutube" style="width: 200px; " />
+</FlexboxLayout>
+<FlexboxLayout alignItems="flex-start" backgroundColor="#3c495e">
+  <Label text="first" width="70" height="70" backgroundColor="#43b883"/>
+  <Label text="second" width="70" height="70" backgroundColor="#1c6b48"/>
+  <Label text="third" width="70" height="70" backgroundColor="#289062"/>
+</FlexboxLayout>
+
+
+              <br/>
+              <button @click="eventVideo('playVideo')">Play</button>
+              <button @click="eventVideo('stopVideo')">Stop</button>
+              <button @click="eventVideo('pauseVideo')">Pause</button>
+              <button @click="eventVideo('resetView')">Reset</button>
+            </div>
+
+            <div class="alert alert-success" style="marginTop: 5%" >
               <div class="container">
                 <b>Pour en voir plus</b> : J'ai réalisé un article LinkedIn détaillant un peu mieux les fonctionnalités de mon 
                 jeu <a href="https://www.linkedin.com/pulse/my-future-mobile-game-pet-fox-samantha-deschaepmeester/" class="linkClick" >ici.</a>
               </div>
             </div>
-          <br/>
-            <div>
-              <h5>Regarder les premières vidéos de My pet fox :</h5>
-                <button class="button-87" @click="eventVideo('playVideo')">Play</button>
-                <button class="button-87" @click="eventVideo('stopVideo')">Stop</button>
-                <button class="button-87" @click="eventVideo('pauseVideo')">Pause</button>
-                <button class="button-87" @click="eventVideo('resetView')">Reset</button>
-                <br/>
-                <LazyYoutube ref="youtubeVideo" src="https://www.youtube.com/watch?v=gsd_HGN1Tog&list=PLVTOiOamTkwKNusnK4w8eav7kWht3L8ZN&index=4"  maxWidth="1050px" thumbnailQuality="medium" class="youtube" />
-                <img :src="imgYoutube" style="width: 200px; marginBottom: 15%" />
-            </div>
           </div>
-<hr />
 
           <h4 style="marginTop: 10%">Mon portfolio</h4>
           <div class="md-layout">
@@ -104,6 +113,7 @@
 
 <script>
 import { LazyYoutube } from "vue-lazytube";
+import 'vue-lazy-youtube-video/dist/style.css';
 
 export default {
   components: {
@@ -143,36 +153,6 @@ export default {
 <style lang="scss" scoped>
 iframe{
   height: 100%!important;
-}
-.button-87 {
-  margin: 10px;
-  padding: 10px 30px;
-  text-align: center;
-  text-transform: uppercase;
-  transition: 0.5s;
-  background-size: 200% auto;
-  color: white;
-  border-radius: 10px;
-  display: inline-block;
-  justify-content: center!important;
-  border: 0px;
-  font-weight: 700;
-  box-shadow: 0px 0px 14px -7px #f09819;
-  background-image: linear-gradient(45deg, #FF512F 0%, #F09819  51%, #FF512F  100%);
-  cursor: pointer;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-}
-
-.button-87:hover {
-  background-position: right center;
-  color: #fff;
-  text-decoration: none;
-}
-
-.button-87:active {
-  transform: scale(0.95);
 }
 .youtube{
   width: 750px!important;

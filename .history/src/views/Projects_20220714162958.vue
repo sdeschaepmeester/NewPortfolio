@@ -67,7 +67,6 @@
                 <img :src="imgYoutube" style="width: 200px; marginBottom: 15%" />
             </div>
           </div>
-<hr />
 
           <h4 style="marginTop: 10%">Mon portfolio</h4>
           <div class="md-layout">
@@ -95,6 +94,7 @@
             D'autres projets verront le jour, mais ne sont pour le moment qu'au stade de l'idée.
             Je préfère me focaliser sur un projet, et le finir avant d'en commencer un autre.
           </p>
+            <LazyYoutubeVideo src="https://www.youtube.com/embed/4JS70KB9GS0" />
         </div>
       </div>
     </div>
@@ -104,10 +104,13 @@
 
 <script>
 import { LazyYoutube } from "vue-lazytube";
+import LazyYoutubeVideo from 'vue-lazy-youtube-video'
+import 'vue-lazy-youtube-video/dist/style.css';
 
 export default {
   components: {
     LazyYoutube,
+    LazyYoutubeVideo
   },
   bodyClass: "profile-page",
   data() {

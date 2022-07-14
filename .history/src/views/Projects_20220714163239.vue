@@ -1,5 +1,7 @@
 <template>
 <div>
+                  <LazyYoutube ref="youtubeVideo" src="https://www.youtube.com/watch?v=gsd_HGN1Tog&list=PLVTOiOamTkwKNusnK4w8eav7kWht3L8ZN&index=4"  maxWidth="1050px" thumbnailQuality="medium" class="youtube" />
+
   <div class="wrapper">
     <parallax
       class="section page-header"
@@ -67,7 +69,6 @@
                 <img :src="imgYoutube" style="width: 200px; marginBottom: 15%" />
             </div>
           </div>
-<hr />
 
           <h4 style="marginTop: 10%">Mon portfolio</h4>
           <div class="md-layout">

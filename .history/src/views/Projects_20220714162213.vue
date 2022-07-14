@@ -58,16 +58,15 @@
           <br/>
             <div>
               <h5>Regarder les premières vidéos de My pet fox :</h5>
-                <button class="button-87" @click="eventVideo('playVideo')">Play</button>
-                <button class="button-87" @click="eventVideo('stopVideo')">Stop</button>
-                <button class="button-87" @click="eventVideo('pauseVideo')">Pause</button>
-                <button class="button-87" @click="eventVideo('resetView')">Reset</button>
+                <button class="button-5" @click="eventVideo('playVideo')">Play</button>
+                <button class="button-5" @click="eventVideo('stopVideo')">Stop</button>
+                <button class="button-5" @click="eventVideo('pauseVideo')">Pause</button>
+                <button class="button-5" @click="eventVideo('resetView')">Reset</button>
                 <br/>
                 <LazyYoutube ref="youtubeVideo" src="https://www.youtube.com/watch?v=gsd_HGN1Tog&list=PLVTOiOamTkwKNusnK4w8eav7kWht3L8ZN&index=4"  maxWidth="1050px" thumbnailQuality="medium" class="youtube" />
                 <img :src="imgYoutube" style="width: 200px; marginBottom: 15%" />
             </div>
           </div>
-<hr />
 
           <h4 style="marginTop: 10%">Mon portfolio</h4>
           <div class="md-layout">
@@ -104,6 +103,7 @@
 
 <script>
 import { LazyYoutube } from "vue-lazytube";
+import 'vue-lazy-youtube-video/dist/style.css';
 
 export default {
   components: {
@@ -141,38 +141,50 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.button-5 {
+  align-items: center;
+  background-clip: padding-box;
+  background-color: #fa6400;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: #fff;
+  display: inline-flex;
+  font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 3rem;
+  padding: calc(.900rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+}
+
+.button-5:hover,
+.button-5:focus {
+  background-color: #fb8332;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+
+.button-5:hover {
+  transform: translateY(-1px);
+}
+
+.button-5:active {
+  background-color: #c85000;
+  box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
+  transform: translateY(0);
+}
 iframe{
   height: 100%!important;
-}
-.button-87 {
-  margin: 10px;
-  padding: 10px 30px;
-  text-align: center;
-  text-transform: uppercase;
-  transition: 0.5s;
-  background-size: 200% auto;
-  color: white;
-  border-radius: 10px;
-  display: inline-block;
-  justify-content: center!important;
-  border: 0px;
-  font-weight: 700;
-  box-shadow: 0px 0px 14px -7px #f09819;
-  background-image: linear-gradient(45deg, #FF512F 0%, #F09819  51%, #FF512F  100%);
-  cursor: pointer;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-}
-
-.button-87:hover {
-  background-position: right center;
-  color: #fff;
-  text-decoration: none;
-}
-
-.button-87:active {
-  transform: scale(0.95);
 }
 .youtube{
   width: 750px!important;

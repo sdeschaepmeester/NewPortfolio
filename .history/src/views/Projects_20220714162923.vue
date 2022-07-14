@@ -67,7 +67,6 @@
                 <img :src="imgYoutube" style="width: 200px; marginBottom: 15%" />
             </div>
           </div>
-<hr />
 
           <h4 style="marginTop: 10%">Mon portfolio</h4>
           <div class="md-layout">
@@ -104,10 +103,13 @@
 
 <script>
 import { LazyYoutube } from "vue-lazytube";
+import LazyYoutubeVideo from 'vue-lazy-youtube-video'
+import 'vue-lazy-youtube-video/dist/style.css';
 
 export default {
   components: {
     LazyYoutube,
+    LazyYoutubeVideo
   },
   bodyClass: "profile-page",
   data() {
@@ -141,9 +143,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-iframe{
-  height: 100%!important;
-}
 .button-87 {
   margin: 10px;
   padding: 10px 30px;
@@ -173,6 +172,9 @@ iframe{
 
 .button-87:active {
   transform: scale(0.95);
+}
+iframe{
+  height: 100%!important;
 }
 .youtube{
   width: 750px!important;

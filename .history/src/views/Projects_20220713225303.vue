@@ -1,5 +1,4 @@
 <template>
-<div>
   <div class="wrapper">
     <parallax
       class="section page-header"
@@ -31,7 +30,7 @@
             <div class="md-layout-item md-size-50 md-xsmall-size-100" >
               <div style="box-shadow: 1px 1px 10px 1px #154d1a;">
                 <img
-                  :src="require('@/assets/img/animation/fox_shelf.gif')"
+                  :src="require('@/assets/img/livingroom.png')"
                 />
               </div>
             </div>
@@ -47,34 +46,26 @@
                 Rencontrer des personnages en fonction de votre heure de connexion, gagner des pièces en jouant à des minis jeux,
                  cuisiner, compléter les objectifs cachés dans le jeu... 
               </p>
+                    <LazyYoutube src="https://www.youtube.com/watch?v=EwmwHKwsFOw" />
+
             </div>
+
           </div>
-          <div class="alert alert-success" style="marginTop: 5%" >
+            <div class="alert alert-success" style="marginTop: 5%" >
               <div class="container">
-                <b>Pour en voir plus</b> : J'ai réalisé un article LinkedIn détaillant un peu mieux les fonctionnalités de mon 
-                jeu <a href="https://www.linkedin.com/pulse/my-future-mobile-game-pet-fox-samantha-deschaepmeester/" class="linkClick" >ici.</a>
+                <b>Pour en voir plus</b> : J'ai réalisé une playlist de vidéos de mon jeu. La playlist
+                est disponible <a href="https://www.youtube.com/watch?v=EwmwHKwsFOw&list=PLVTOiOamTkwKNusnK4w8eav7kWht3L8ZN" class="linkClick" >en cliquant sur ce lien.</a>
               </div>
             </div>
-          <br/>
-            <div>
-              <h5>Regarder les premières vidéos de My pet fox :</h5>
-                <button class="button-87" @click="eventVideo('playVideo')">Play</button>
-                <button class="button-87" @click="eventVideo('stopVideo')">Stop</button>
-                <button class="button-87" @click="eventVideo('pauseVideo')">Pause</button>
-                <button class="button-87" @click="eventVideo('resetView')">Reset</button>
-                <br/>
-                <LazyYoutube ref="youtubeVideo" src="https://www.youtube.com/watch?v=gsd_HGN1Tog&list=PLVTOiOamTkwKNusnK4w8eav7kWht3L8ZN&index=4"  maxWidth="1050px" thumbnailQuality="medium" class="youtube" />
-                <img :src="imgYoutube" style="width: 200px; marginBottom: 15%" />
-            </div>
           </div>
-<hr />
+
 
           <h4 style="marginTop: 10%">Mon portfolio</h4>
           <div class="md-layout">
             <div class="md-layout-item md-size-50 md-xsmall-size-100" >
               <div style="box-shadow: 1px 1px 10px 1px #154d1a;">
                 <img
-                  src="@/assets/img/drawing/andrew.png"
+                  :src="require('@/assets/img/wallpaper.png')"
                 />
               </div>
             </div>
@@ -99,7 +90,6 @@
       </div>
     </div>
   </div>
-</div>
 </template>
 
 <script>
@@ -107,12 +97,11 @@ import { LazyYoutube } from "vue-lazytube";
 
 export default {
   components: {
-    LazyYoutube,
+    LazyYoutube
   },
   bodyClass: "profile-page",
   data() {
     return {
-      image: require("@/assets/img/drawing/fox-bubbles.png")
     };
   },
   props: {
@@ -120,10 +109,6 @@ export default {
       type: String,
       default: require("@/assets/img/mill.png")
     },
-    imgYoutube: {
-      type: String,
-      default: require("@/assets/img/animation/fox-redone.gif")
-    }
   },
   computed: {
     headerStyle() {
@@ -133,50 +118,11 @@ export default {
     }
   },
   methods: {
-    eventVideo(event) {
-          this.$refs["youtubeVideo"][event]();
-        },
   }
 };
 </script>
 
 <style lang="scss" scoped>
-iframe{
-  height: 100%!important;
-}
-.button-87 {
-  margin: 10px;
-  padding: 10px 30px;
-  text-align: center;
-  text-transform: uppercase;
-  transition: 0.5s;
-  background-size: 200% auto;
-  color: white;
-  border-radius: 10px;
-  display: inline-block;
-  justify-content: center!important;
-  border: 0px;
-  font-weight: 700;
-  box-shadow: 0px 0px 14px -7px #f09819;
-  background-image: linear-gradient(45deg, #FF512F 0%, #F09819  51%, #FF512F  100%);
-  cursor: pointer;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-}
-
-.button-87:hover {
-  background-position: right center;
-  color: #fff;
-  text-decoration: none;
-}
-
-.button-87:active {
-  transform: scale(0.95);
-}
-.youtube{
-  width: 750px!important;
-}
 .linkClick{
   color: white!important;
   text-decoration: underline!important;

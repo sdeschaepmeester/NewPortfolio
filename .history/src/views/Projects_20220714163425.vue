@@ -67,7 +67,7 @@
                 <img :src="imgYoutube" style="width: 200px; marginBottom: 15%" />
             </div>
           </div>
-<hr />
+<hr style="border: black 1px solid;">
 
           <h4 style="marginTop: 10%">Mon portfolio</h4>
           <div class="md-layout">
