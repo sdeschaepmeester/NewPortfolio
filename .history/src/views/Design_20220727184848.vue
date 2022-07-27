@@ -166,7 +166,7 @@ export default {
   props: {
     header: {
       type: String,
-      default: require("@/assets/img/bgdesign.png")
+      default: require("@/assets/img/test.png")
     }
   },
   computed: {
